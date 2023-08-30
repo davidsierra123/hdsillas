@@ -104,7 +104,7 @@ class Layaut extends State<DemoMWBottomNavigationScreen1> {
                 height: 25,
                 width: 25,
                 color: appStore.iconColor),
-            label: 'Home',
+            label: 'Homess',
             backgroundColor: appStore.appBarColor,
           ),
           //2
