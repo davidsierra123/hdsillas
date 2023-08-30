@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_application_1/view/layaut.dart';
 
 void main() {
   debugPaintSizeEnabled = false;
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }
@@ -21,8 +23,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Color.fromARGB(255, 214, 225, 233), // Cambia el color de fondo aquí
+      backgroundColor: const Color.fromARGB(
+          255, 214, 225, 233), // Cambia el color de fondo aquí
       appBar: AppBar(title: const Text('Login')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -56,12 +58,14 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoMWBottomNavigationScreen1()),
+                );
                 // Lógica para procesar el inicio de sesión
               },
               child: const Text('Ingresar'),
             ),
-
-
             const SizedBox(height: 16.0),
             TextButton(
               onPressed: () {
@@ -110,7 +114,6 @@ class CreateAccountPage extends StatelessWidget {
             const Text(
               'Formulario de creación de cuenta',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              
             ),
             Padding(
               padding: const EdgeInsets.only(
