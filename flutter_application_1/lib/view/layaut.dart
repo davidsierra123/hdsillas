@@ -11,26 +11,33 @@ class Articulos extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Row(
+            Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(
-                    left: 240.0,
-                    top: 10.0,
-                  ),
-                  child: Text(
-                    'Chairs',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                ),
+                    padding: const EdgeInsets.only(
+                      left: 240.0,
+                    ),
+                    // ignore: avoid_unnecessary_containers
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 180),
+                      child: const Text(
+                        'Chairs',
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    )),
               ],
             ),
-            const SizedBox(height: 10),
-            const Text(
-              "Tipo de sillas:",
-              style: TextStyle(fontSize: 26),
+            // ignore: avoid_unnecessary_containers
+            Container(
+              margin: const EdgeInsets.only(bottom: 130),
+              child: const Text(
+                "Tipo de sillas:",
+                style: TextStyle(fontSize: 26),
+              ),
             ),
-            const SizedBox(height: 30),
+
+            // const SizedBox(height: 40),
             Row(
               children: [
                 InkWell(
@@ -53,11 +60,12 @@ class Articulos extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Image.asset('assets/packsillas.png'),
                         Text('Sillas de Comedor'),
                       ],
                     ),
                   ),
+
+                  
                 ),
                 Container(
                   margin: const EdgeInsets.only(left: 30.0, top: 10.0),
@@ -96,11 +104,12 @@ class Articulos extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      //  Image.asset('assets/sillaseventos.png'),
                       Text('Sillas de Evento'),
                     ],
                   ),
+
                 ),
+                
                 Container(
                   margin: const EdgeInsets.only(left: 30.0, top: 130.0),
                   height: 100,
