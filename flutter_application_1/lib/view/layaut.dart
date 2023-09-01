@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'sbonitas.dart';
 
 class Articulos extends StatelessWidget {
   const Articulos({super.key});
@@ -49,11 +50,7 @@ class Articulos extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   // context,
-                    //   // MaterialPageRoute(
-                    //   //     builder: (context) => const Articulos()),
-                    // );
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const Productos())); 
                   },
                   child: Container(
                     margin: const EdgeInsets.only(left: 115, bottom: 90),
@@ -65,14 +62,6 @@ class Articulos extends StatelessWidget {
                       borderRadius:
                           BorderRadius.circular(290.0), // Bordes redondeados
                     ),
-                    child: GestureDetector(
-                      onTap: () {
-                        // Navegar a la nueva pantalla cuando se presione la columna
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Articulos()),
-                        );
-                      },
                       child: const Column(
                         // Usamos Column como contenedor de múltiples hijos
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -83,7 +72,7 @@ class Articulos extends StatelessWidget {
                                   TextStyle(fontSize: 18, color: Colors.white)),
                         ],
                       ),
-                    ),
+                    
                   ),
                 ),
               ],

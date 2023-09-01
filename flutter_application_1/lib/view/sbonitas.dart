@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Articulos extends StatelessWidget {
-  const Articulos({super.key});
+class Productos extends StatelessWidget {
+  const Productos({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,29 +15,32 @@ class Articulos extends StatelessWidget {
               children: [
                 const Padding(
                   padding: EdgeInsets.only(
-                    left: 2.0,
-                    top: 10.0,
+                    left: 290.0,
+                    top: 5.0,
                   ),
                   child: Text(
-                    'Sillex',
-                    style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+                    'Chairs',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(
-                    width: 225.0), // Espacio entre el texto y la imagen
+                    width: 10.0), // Espacio entre el texto y la imagen
                 SizedBox(
                   height: 30.0,
                   width: 30.0,
                   child: Image.asset(
-                    'assets/buscar.png',
+                    'assets/login.png',
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 33),
-            const Text(
-              "Articulo:",
-              style: TextStyle(fontSize: 26),
+            Container(
+              margin: const EdgeInsets.only(bottom: 50, right: 210),
+              child: const Text(
+                "Sillas bonitas:",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             const SizedBox(height: 20),
             Row(
@@ -52,25 +55,68 @@ class Articulos extends StatelessWidget {
                     //           )),
                     // );
                   },
-                  child: Container(
-                    margin: const EdgeInsets.only(left: 30.0, top: 10.0),
-                    height: 250,
-                    width: 150,
-                    child: Column(
-                      // Usamos Column como contenedor de múltiples hijos
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset('assets/packsillas.png'),
-                        const Text('Sillas de Comedor'),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(
+                            left: 40.0,
+                            top:20.0), // Ajusta la distancia entre el contenedor y los botones
+                        height: 150,
+                        width: 150,
+                        // decoration: const BoxDecoration(
+                        //   color: Color.fromARGB(255, 192, 209, 223),
+                        // ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset('assets/silla1.png'),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              // Lógica para el primer botón aquí
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15,
+                                  vertical:
+                                      5), // Ajusta el padding para reducir el tamaño
+                            ),
+                            child: const Text('Comprar'),
+                          ),
+                          const SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              // Lógica para el segundo botón aquí
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color.fromARGB(255, 54, 57, 244),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 15,
+                                  vertical:5), // Ajusta el padding para reducir el tamaño
+                            ),
+                            child: const Text('Alquilar'),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(left: 50.0, top: 10.0),
                   height: 250,
                   width: 150,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 192, 209, 223),
+                  ),
                   child: Column(
                     // Usamos Column como contenedor de múltiples hijos
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,6 +136,9 @@ class Articulos extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 30.0, top: 10.0),
                   height: 250,
                   width: 150,
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 192, 209, 223),
+                  ),
                   child: Column(
                     // Usamos Column como contenedor de múltiples hijos
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
