@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Articulos()),
+                  MaterialPageRoute(builder: (context) => const Articulos()),
                 );
                 // Lógica para procesar el inicio de sesión
               },
