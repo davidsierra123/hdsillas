@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/formu.dart';
 
 class Productos extends StatelessWidget {
   const Productos({super.key});
@@ -280,6 +281,11 @@ class Productos extends StatelessWidget {
                           const SizedBox(width: 10),
                           ElevatedButton(
                             onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Formu()),
+                              );
                               // Lógica para el segundo botón aquí
                             },
                             style: ElevatedButton.styleFrom(
